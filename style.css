@@ -4,9 +4,65 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+    min-height: 100vh;
 }
 
 h1 {
+    text-align: center;
     font-family: 'Times New Roman', Times, serif;
     color: white;
+    text-shadow:
+        -1px -1px 0 rgb(42, 41, 41),
+         1px -1px 0 rgb(42, 41, 41),
+        -1px  1px 0 rgb(42, 41, 41),
+         1px  1px 0 rgb(42, 41, 41);
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.bird-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.bird-card h2 {
+    margin-top: 0;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 2px black;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.info-table td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.info-table td:first-child {
+    font-weight: bold;
+    width: 40%;
 }
