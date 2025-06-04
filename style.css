@@ -61,8 +61,3 @@ h1 {
     padding: 6px 10px;
     background-color: rgba(255, 255, 255, 0.1);
 }
-
-.info-table td:first-child {
-    font-weight: bold;
-    width: 40%;
-}
