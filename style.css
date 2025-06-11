@@ -9,6 +9,38 @@ body {
     min-height: 100vh;
 }
 
+.side-menu {
+    position: fixed;
+    top: 100px; /* puedes ajustarlo */
+    left: 0;
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    border-right: 1px solid #ccc;
+    height: auto;
+    z-index: 1000;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    margin-bottom: 10px;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.side-menu a:hover {
+    color: #2980b9;
+}
+
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;

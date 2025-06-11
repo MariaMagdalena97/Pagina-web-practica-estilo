@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-</head> <!--¿Head haría que el titulo se mantuviese en la parte de arriba permanentemente?-->
+</head>
 <body>
-    <div class="overlay"> <!-- divide el contrenido del "fondo", o la capa anterior -->
+    <!-- Clase side-menu para poder hacer referencia a esto y personalizarlo en CSS-->
+    <div class="side-menu"> 
+    <ul>
+        <!-- Lista de las clases "bird-card" que aparecerán después-->
+        <li><a href="#introduccion">Introducción</a></li>
+        <li><a href="#chucao">Chucao</a></li>
+        <li><a href="#loica">Loica</a></li>
+    </ul>
+</div>
+    <!-- Divide el contrenido del "fondo", o la capa anterior -->
+    <!-- Clase "section overlay" con una etiqueta "introduccion", para hacer referencia en el side-menu-->
+    <div class="section overlay" id="introduccion"> 
         <h1>ESPECIES DE PÁJAROS EN CHILE</h1>
         <h2>Bienvenidos a Especies de Pájaros en Chile: Tesoros alados de nuestra biodiversidad</h2>
         <h3>
@@ -15,29 +26,36 @@
         Desde el altiplano andino hasta los bosques australes, más de 500 especies de aves habitan nuestros cielos, 
         humedales, costas y montañas. Algunas son endémicas —es decir, no existen en ningún otro lugar del mundo—, lo 
         que convierte a Chile en un territorio único para la observación y el estudio de estas fascinantes criaturas.  
-        <br>
-        <br>Las aves cumplen roles ecológicos esenciales, como la polinización, el control de plagas y la dispersión de semillas, 
+        <br><br>
+        Las aves cumplen roles ecológicos esenciales, como la polinización, el control de plagas y la dispersión de semillas, 
         siendo indicadores naturales de la salud de los ecosistemas. Su presencia enriquece nuestra cultura, 
         paisajes y conexión con la naturaleza.  
-        <br>
-        <br>Sin embargo, muchas especies enfrentan amenazas crecientes debido a la pérdida de hábitat, el cambio climático, 
+        <br><br>
+        Sin embargo, muchas especies enfrentan amenazas crecientes debido a la pérdida de hábitat, el cambio climático, 
         la contaminación y la acción humana. Algunas, como el Gaviotín chico o el Canquén colorado, están en peligro de extinción, 
         y requieren de nuestra atención y compromiso para su conservación.  
-        <br>
-        <br>Este sitio busca ser un espacio de conocimiento, apreciación y protección de las aves chilenas. Aquí encontrarás 
+        <br><br>
+        Este sitio busca ser un espacio de conocimiento, apreciación y protección de las aves chilenas. Aquí encontrarás 
         fichas informativas, fotografías, mapas de distribución y consejos para observar aves de forma responsable. Te invitamos 
         a descubrir, aprender y sumarte al cuidado de estas maravillosas embajadoras aladas de nuestro país.
         </h3>
 
-        <div class="container"> <!-- el conteiner es donde se van a contener las bird-cards -->
-            <div class="bird-card"> <!-- el bird-card es el cuadro de contenido del pájaro -->
+        <!-- Contenedor donde se van a contener las bird-cards -->
+        <div class="container"> 
+            <!-- Primera carta de pájaro, que se compone de título, imagen, descripción, link y cuadro informatívo-->
+            <div class="bird-card" id="chucao"> 
+                <!-- Título-->
                 <h2>Chucao (Scelorchilus rubecula)</h2>
+                <!-- Imágen-->
                 <img src="Chucao.jpg" alt="Chucao" style="width:100%; max-width:300px; border-radius:10px; margin:10px 0;">
+                <!-- Descripción-->
                 <p>El chucao es un ave forestal muy vocal, típica del sur de Chile, reconocida por su canto fuerte y territorial.</p>
+                <!-- Link con vídeo del pájaro, se customiza la apariencia del acceso al link-->
                 <a href="https://www.youtube.com/shorts/v8gBSwv97is" 
                 target="_blank" 
                 class="link-azul">
                 Canto del Chucao</a>
+                <!-- Tabla informatíva-->
                 <table class="info-table">
                     <tr><td>Zona de Chile</td><td>Sur (desde el Biobío hasta Chiloé)</td></tr>
                     <tr><td>Peregrinaje</td><td>No migratorio</td></tr>
@@ -48,8 +66,9 @@
                     <tr><td>Comportamiento de vuelo</td><td>Terrestre, raramente vuela</td></tr>
                 </table>
             </div>
-
-            <div class="bird-card">
+            
+            <!-- Otro pájaro-->
+            <div class="bird-card" id="loica">
                 <h2>Loica (Sturnella loyca)</h2>
                 <p>La loica se reconoce fácilmente por su pecho rojo brillante y su canto melódico en zonas abiertas.</p>
                 <table class="info-table">
