@@ -13,12 +13,16 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 120px; 
-    height: 100%;
-    background-color: #f4f4f4;
-    padding: 20px;
+    width: 170px;
+    height: 100vh;
+    background-color: #f0f0f0;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-sizing: border-box;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .side-menu ul {
@@ -29,6 +33,13 @@ body {
 
 .side-menu li {
     margin-bottom: 10px;
+}
+
+.side-menu h3 {
+    text-decoration: none;
+    color: #092948;
+    font-weight: bold;
+    transition: color 0.2s;
 }
 
 .side-menu a {
@@ -42,12 +53,11 @@ body {
     color: #2980b9;
 }
 
-.overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 30px 50px;
+.autor {
+    font-size: 0.75rem;
+    color: #666;
     text-align: center;
-    min-height: 100vh;
+    margin-top: auto;
 }
 
 h1 {
@@ -70,27 +80,30 @@ h2 {
 h3 {
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: normal;      /* Quita la negrita */
-    font-size: 1rem;          /* Tamaño un poco más pequeño (ajustable) */
+    font-weight: normal;
+    font-size: 1rem;
     color: white;
-}
-
-.link-azul {
-    color: rgba(100, 134, 214, 0.92);
-    text-decoration: underline; /* Opcional, si quieres que parezca más un link tradicional */
 }
 
 .container {
     display: flex;
-    justify-content: center; /* Centra las columnas en el contenedor */
-    gap: 40px;                 /* ⬅️ Espacio horizontal entre columnas */
-    gap: 20px;               /* Espacio entre las columnas */
-    margin-left: 140px;      /* Para que no se solape con el menú lateral */
+    justify-content: center;
+    gap: 20px;
+    margin-left: 140px; /* Para que no se solape con el menú lateral */
 }
+
 .column {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio vertical entre tarjetas de la misma columna */
+    gap: 20px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .bird-card {
@@ -117,4 +130,9 @@ h3 {
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 6px 10px;
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.link-azul {
+    color: rgba(100, 134, 214, 0.92);
+    text-decoration: underline;
 }
