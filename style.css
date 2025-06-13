@@ -1,47 +1,63 @@
+
 body {
-    background-color: #138d75;
-    background-image: url('forest-7406241_1280.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    min-height: 100vh;
+    background-color: #138d75; /* Color de fondo de respaldo */
+    background-image: url('forest-7406241_1280.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el area */
+    background-repeat: no-repeat; /* No repite la imagen más abajo ni lateral */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Imagen fija con el scroll aún que sea más grande*/
+    margin: 0; /* Elimina el margen por defecto */
+    min-height: 100vh; /* Altura mínima*/
+    position: relative; 
 }
 
-.side-menu {
-    position: fixed;
+/*Para oscurecer la imagen de fondo */
+body::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    width: 170px;
-    height: 100vh;
-    background-color: #f0f0f0;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay negro con 50% de opacidad */
+    z-index: -1; /* Detrás del contenido, encima de la imagen */
+}
+
+/*Estilos para el menú lateral (side-menu) */
+.side-menu {
+    position: fixed; /* Menú fijo en la pantalla */
+    top: 0; /*Margenes*/
+    left: 0;
+    width: 170px; /* Ancho del menú */
+    height: 100vh; /* Altura*/
+    background-color: #f0f0f0; /* Color de fondo del menú */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra*/
+    padding: 20px; /* Espaciado interno */
     box-sizing: border-box;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    z-index: 1000; /* Asegura que esté por encima */
+    display: flex; /* Usa Flexbox para la distribución interna */
+    flex-direction: column; /* Elementos apilados verticalmente, y no al costado */
+    justify-content: space-between; /* Distribuye el espacio verticalmente */
 }
 
 .side-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Quita los puntos de la lista, para que soloe sté el nombre del pajaro*/
+    padding: 0; /* Elimina padding por defecto */
+    margin: 0; /* Elimina margen por defecto */
 }
 
 .side-menu li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
 }
 
+/*Texto del menú lateral*/
 .side-menu h3 {
     text-decoration: none;
     color: #092948;
     font-weight: bold;
-    transition: color 0.2s;
+    transition: color 0.2s; ++
 }
-
+/*Texto del menú lateral abajo*/
 .side-menu a {
     text-decoration: none;
     color: #2c3e50;
@@ -50,68 +66,82 @@ body {
 }
 
 .side-menu a:hover {
-    color: #2980b9;
+    color: #055449; /* Cambio de color al pasar el raton */
 }
 
 .autor {
     font-size: 0.75rem;
     color: #666;
     text-align: center;
-    margin-top: auto;
+    margin-top: auto; /* Empuja el autor al final del menú */
 }
 
+/*Estilo introducción*/
+#introduccion {
+    /* Margen izquierdo para dejar espacio al menú fijo (ancho del menú + padding) */
+    margin-left: 220px;
+    padding: 20px; /* Padding general para el contenido */
+}
+
+/*Texto general*/
 h1 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     color: white;
+    /* Sombra para estilizar el texto*/
     text-shadow:
         -1px -1px 0 rgb(42, 41, 41),
          1px -1px 0 rgb(42, 41, 41),
         -1px  1px 0 rgb(42, 41, 41),
          1px  1px 0 rgb(42, 41, 41);
 }
-
+/*Texto general*/
 h2 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     color: white;
 }
-
+/*Texto general*/
 h3 {
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
     font-size: 1rem;
     color: white;
+    padding-bottom: 20px;
 }
 
+/*Estilo de las tarjetas bird-card*/
 .container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-left: 140px; /* Para que no se solape con el menú lateral */
+    display: flex; /* Usa Flexbox para las columnas de tarjetas */
+    justify-content: center; /* Centra las columnas */
+    gap: 20px; /* Espacio entre columnas */
+    padding: 0 20px; /* Padding horizontal dentro del contenedor */
 }
 
 .column {
-    display: flex;
+    display: flex; /* Usa Flexbox para apilar tarjetas verticalmente, no horizontal*/
     flex-direction: column;
-    gap: 20px;
+    gap: 20px; /* Espacio entre tarjetas */
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     color: white;
     padding: 30px 50px;
     text-align: center;
     min-height: 100vh;
 }
 
+/*Estilos para las tarjetas individuales de pájaros (bird-card)*/
 .bird-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde semitransparente */
     padding: 20px;
     width: 400px;
     border-radius: 10px;
+    text-align: center; /* Centra todo el texto dentro de la tarjeta */
+    color: white; /* Color blanco para todo el texto de la tarjeta */
 }
 
 .bird-card h2 {
@@ -120,9 +150,10 @@ h3 {
     text-shadow: 1px 1px 2px black;
 }
 
+/*Estilos para las tablas de información dentro de las tarjetas*/
 .info-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Bordes de la tabla*/
     margin-top: 15px;
 }
 
@@ -130,8 +161,11 @@ h3 {
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 6px 10px;
     background-color: rgba(255, 255, 255, 0.1);
+    text-align: left; /* Alinea el texto a la izquierda en las celdas */
+    color: white; /* Color blanco en las tablas */
 }
 
+/* Estilos para los enlaces azules (videos de canto) */
 .link-azul {
     color: rgba(100, 134, 214, 0.92);
     text-decoration: underline;
